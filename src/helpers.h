@@ -154,4 +154,18 @@ vector<double> getXY(double s, double d, const vector<double> &maps_s,
   return {x,y};
 }
 
+int getLane(float d)
+{
+  int car_lane;
+  if(d > 0 && d < 4) {
+    car_lane = 0;
+  } else if(d > 4 && d < 8) {
+    car_lane = 1;
+  } else if(d > 8 and d < 12) {
+    car_lane = 2;
+	}
+  return car_lane;
+}
+
+
 #endif  // HELPERS_H
